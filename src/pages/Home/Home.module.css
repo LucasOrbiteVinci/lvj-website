@@ -1,0 +1,7 @@
+.body {
+    background-image: url(/src/images/piscina-background-home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 85vh;      
+};

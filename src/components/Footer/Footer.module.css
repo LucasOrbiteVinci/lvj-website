@@ -1,0 +1,23 @@
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #0040b2;
+    color: aliceblue;
+    font-size: 20px;
+    margin-top: 88px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    transition: 0.5s;
+    justify-content: space-evenly;
+}
+
+.icons:hover {
+    opacity: 70%;
+}
