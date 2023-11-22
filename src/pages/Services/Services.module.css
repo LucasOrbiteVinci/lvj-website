@@ -3,12 +3,21 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 85vh;      
+    height: 100%; 
 };
+
+
 
 .infos {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+.infosItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }

@@ -1,5 +1,3 @@
-import React from 'react';
-
 //css
 import styles from './Services.module.css';
 
@@ -12,21 +10,32 @@ import { MdElectricBolt } from 'react-icons/md';
 const Services = () => {
   return (
     <div className={styles.body}>
-      <h1>Serviços</h1>
-
+      <h1 className={styles.title}>Serviços:</h1>
       <div className={styles.infos}>
-        <PiSwimmingPoolBold />
-        <p>Limpeza e Manutenção de Piscinas.</p>
-        <FaSwimmer />
-        <p>Serviços</p>
-        <GiPowderBag />
-        <p>Troca de Areia</p>
-        <PiEngineFill />
-        <p>Conserto de Bombas</p>
-        <FaFaucet />
-        <p>Hidraulica</p>
-        <MdElectricBolt />
-        <p>Eletrica</p>
+        <div className={styles.infosItem}>
+          <PiSwimmingPoolBold />
+          <p>Limpeza e Manutenção de Piscinas.</p>
+        </div>
+        <div className={styles.infosItem}>
+          <FaSwimmer />
+          <p>Serviços</p>
+        </div>
+        <div className={styles.infosItem}>
+          <GiPowderBag />
+          <p>Troca de Areia</p>
+        </div>
+        <div className={styles.infosItem}>
+          <PiEngineFill />
+          <p>Conserto de Bombas</p>
+        </div>
+        <div className={styles.infosItem}>
+          <FaFaucet />
+          <p>Hidraulica</p>
+        </div>
+        <div className={styles.infosItem}>
+          <MdElectricBolt />
+          <p>Eletrica</p>
+        </div>
       </div>
     </div>
   );

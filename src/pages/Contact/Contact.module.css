@@ -3,5 +3,55 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 85vh;      
+    height: 100%;
 };
+
+form {
+    text-align: center;
+  }
+  
+  .form_group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+    
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+
+  }
+  
+  input,
+  textarea {
+    width: 300px;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  textarea {
+    height: 200px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  input[type="submit"] {
+    background-color: #0052b0;
+    color: white;
+    cursor: pointer;
+    width: 300px;
+    margin-top: 10px;
+    transition: .5s;
+  }
+
+  input[type="submit"]:hover {
+    opacity: 80%;
+  }

@@ -1,9 +1,8 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea, Grid } from '@mui/material';
 
 //CSS
 import styles from './About.module.css';
@@ -12,8 +11,13 @@ const About = () => {
   return (
     <div className={styles.body}>
       {
-        <div className={styles.card}>
-          <Card sx={{ maxWidth: 345 }}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Card item sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -40,7 +44,7 @@ const About = () => {
               </CardContent>
             </CardActionArea>
           </Card>
-        </div>
+        </Grid>
       }
     </div>
   );
