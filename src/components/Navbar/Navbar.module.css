@@ -4,8 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: .5em 2em;
-    background-image:  url(/src/images/textura-piscina.jpg);
-    background-size: 50%;
+    background: rgb(15,171,203);
+    background: linear-gradient(0deg, rgba(15,171,203,1) 0%, rgba(8,16,162,1) 100%);
     color: aliceblue;
     list-style: none;
     height: 10%;
@@ -28,12 +28,14 @@
     display: flex;
     list-style: none;
     color: aliceblue;
+    -webkit-text-stroke-width: 1px black;
 }
 
 .links_list li {
     margin-right: 1em;
     list-style: none;
     color: aliceblue;
+    -webkit-text-stroke-width: 1px black;
     font-size: 25px;
     font-weight: 600;
     transition: .4s;

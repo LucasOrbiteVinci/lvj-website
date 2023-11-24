@@ -1,44 +1,55 @@
 .body {
-    background-image: url(/src/images/piscina-background-contato.jpg);
+    background-image: url(/src/images/piscina-background-contatos.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
 };
 
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 form {
     text-align: center;
+    padding: 90px;
+    gap: 20px;
   }
   
   .form_group {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-   
-    
+    flex-direction: column;  
   }
   
   label {
     display: block;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 600;
-
+    gap: 10px;
+    color: black;
+    -webkit-text-stroke: 0.3px white;
+    
   }
   
   input,
   textarea {
-    width: 300px;
+    width: 350px;
     padding: 8px;
     box-sizing: border-box;
     font-size: 18px;
     font-weight: 600;
+    gap: 10px;
   }
   
   textarea {
     height: 200px;
-    width: 300px;
+    width: 350px;
     font-size: 18px;
     font-weight: 600;
   }
@@ -47,7 +58,7 @@ form {
     background-color: #0052b0;
     color: white;
     cursor: pointer;
-    width: 300px;
+    width: 350px;
     margin-top: 10px;
     transition: .5s;
   }

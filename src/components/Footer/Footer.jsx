@@ -11,9 +11,15 @@ const Footer = () => {
     <footer className={styles.footer}>
       <h3>Acompanhe nosso trabalho:</h3>
       <div className={styles.icons}>
-        <FaFacebookSquare />
-        <FaInstagramSquare />
-        <FaWhatsappSquare />
+        <div className={styles.facebook}>
+          <FaFacebookSquare />
+        </div>
+        <div className={styles.instagram}>
+          <FaInstagramSquare />
+        </div>
+        <div className={styles.whatsapp}>
+          <FaWhatsappSquare />
+        </div>
       </div>
       <p>Todos os direitos reservados. &copy;2023 LVJ Piscinas</p>
     </footer>

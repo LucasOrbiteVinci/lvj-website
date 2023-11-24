@@ -137,6 +137,22 @@ const itemData = [
     title: 'Piscina 29',
   },
   {
+    img: '/src/images/portfolio/30.jpg',
+    title: 'Piscina 30',
+  },
+  {
+    img: '/src/images/portfolio/31.jpg',
+    title: 'Piscina 31',
+  },
+  {
+    img: '/src/images/portfolio/32.jpg',
+    title: 'Piscina 32',
+  },
+  {
+    img: '/src/images/portfolio/33.jpg',
+    title: 'Piscina 33',
+  },
+  {
     img: '/src/images/portfolio/Filtro 1.jpg',
     title: 'Filtro 1',
   },

@@ -1,48 +1,67 @@
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 
 //css
 import styles from './Contact.module.css';
 
 export const Contact = () => {
-  const form = useRef();
+  const schema = yup.object().shape({
+    nome: yup.string().required('Campo Nome é obrigatório.'),
+    email: yup
+      .string()
+      .email('Este email não é valido')
+      .required('Campo email é obrigatório.'),
+    message: yup.string().required('Campo Menssagem é obrigatório.'),
+  });
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
 
+  const sendEmail = (data) => {
     emailjs
       .sendForm(
         'gmailMessage',
         'template_ytdwa76',
-        form.current,
+        JSON.stringify(data),
         '8yfmdKJwS18LGtGpb',
       )
       .then(
         (result) => {
           alert(result.text);
+          reset();
         },
         (error) => {
           alert(error.text);
+          reset();
         },
       );
-
-    e.target.reset();
   };
 
   return (
     <div className={styles.body}>
-      <form ref={form} onSubmit={sendEmail}>
+      <form onSubmit={handleSubmit(sendEmail)}>
         <div className={styles.form_group}>
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="user_name" />
+          <input {...register('nome')} type="text" id="nome" />
+          <p>{errors.nome?.message}</p>
         </div>
         <div className={styles.form_group}>
           <label for="email">Email:</label>
-          <input type="email" id="email" name="user_email" />
+          <input {...register('email')} type="email" id="email" />
+          <p>{errors.email?.message}</p>
         </div>
         <div className={styles.form_group}>
           <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="message" />
+          <textarea {...register('message')} id="mensagem" />
+          <p>{errors.message?.message}</p>
         </div>
         <div className={styles.form_group}>
           <input type="submit" value="Enviar" />
