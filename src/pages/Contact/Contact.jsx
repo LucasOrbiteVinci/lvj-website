@@ -5,10 +5,11 @@ import * as yup from 'yup';
 
 //css
 import styles from './Contact.module.css';
+import { useRef } from 'react';
 
 export const Contact = () => {
   const schema = yup.object().shape({
-    nome: yup.string().required('Campo Nome é obrigatório.'),
+    name: yup.string().required('Campo Nome é obrigatório.'),
     email: yup
       .string()
       .email('Este email não é valido')
@@ -25,21 +26,23 @@ export const Contact = () => {
     resolver: yupResolver(schema),
   });
 
-  const sendEmail = (data) => {
+  const form = useRef();
+
+  const sendEmail = (data, e) => {
+    e.preventDefault();
+
     emailjs
       .sendForm(
         'gmailMessage',
         'template_ytdwa76',
-        JSON.stringify(data),
+        form.current,
         '8yfmdKJwS18LGtGpb',
       )
       .then(
         (result) => {
-          alert(result.text);
           reset();
         },
         (error) => {
-          alert(error.text);
           reset();
         },
       );
@@ -47,10 +50,10 @@ export const Contact = () => {
 
   return (
     <div className={styles.body}>
-      <form onSubmit={handleSubmit(sendEmail)}>
+      <form onSubmit={handleSubmit(sendEmail)} ref={form}>
         <div className={styles.form_group}>
-          <label for="nome">Nome:</label>
-          <input {...register('nome')} type="text" id="nome" />
+          <label for="name">Nome:</label>
+          <input {...register('name')} type="text" id="name" />
           <p>{errors.nome?.message}</p>
         </div>
         <div className={styles.form_group}>
@@ -59,8 +62,8 @@ export const Contact = () => {
           <p>{errors.email?.message}</p>
         </div>
         <div className={styles.form_group}>
-          <label for="mensagem">Mensagem:</label>
-          <textarea {...register('message')} id="mensagem" />
+          <label for="message">Mensagem:</label>
+          <textarea {...register('message')} id="message" />
           <p>{errors.message?.message}</p>
         </div>
         <div className={styles.form_group}>
