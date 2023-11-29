@@ -16,7 +16,6 @@ import { MdElectricBolt } from 'react-icons/md';
 const Services = () => {
   return (
     <div className={styles.body}>
-      <h1 className={styles.title}>Serviços:</h1>
       <div className={styles.infos}>
         <div className={styles.infosItem}>
           <Card sx={{ maxWidth: 345 }}>
@@ -120,7 +119,7 @@ const Services = () => {
               <CardMedia
                 component="img"
                 height="180"
-                image="/src/images/portfolio/Bomba 2.jpg"
+                image="/src/images/portfolio/Bomba 4.jpg"
                 alt="bomba-de-piscina"
               />
               <CardContent>

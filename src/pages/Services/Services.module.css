@@ -10,14 +10,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    
 }
 
 .infosItem {
-    display: inline-flex;
+    display: inline-block;
     justify-content: center;
     flex-direction: row;
     padding: 20px;
-    margin-right: 80px;
+    margin-left: 73px;
  
 }

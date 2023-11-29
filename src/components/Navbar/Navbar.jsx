@@ -7,24 +7,29 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <NavLink to="/" className={styles.brand}>
-        LVJ <span>Piscinas</span>
+        <img src="/src/images/LVJ-Logo-Navbar.png" alt="LVJ-Logo" />{' '}
       </NavLink>
+
       <ul className={styles.links_list}>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/about">Sobre</NavLink>
-        </li>
-        <li>
-          <NavLink to="/services">Serviços</NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact">Contato</NavLink>
-        </li>
-        <li>
-          <NavLink to="/gallery">Galeria</NavLink>
-        </li>
+        <NavLink to="/">
+          <li>Home</li>
+        </NavLink>
+
+        <NavLink to="/about">
+          <li>Sobre</li>
+        </NavLink>
+
+        <NavLink to="/services">
+          <li>Serviços</li>
+        </NavLink>
+
+        <NavLink to="/contact">
+          <li>Contato</li>
+        </NavLink>
+
+        <NavLink to="/gallery">
+          <li>Galeria</li>
+        </NavLink>
       </ul>
     </nav>
   );

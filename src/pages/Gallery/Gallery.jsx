@@ -153,6 +153,14 @@ const itemData = [
     title: 'Piscina 33',
   },
   {
+    img: '/src/images/portfolio/34.jpg',
+    title: 'Piscina 34',
+  },
+  {
+    img: '/src/images/portfolio/35.jpg',
+    title: 'Piscina 35',
+  },
+  {
     img: '/src/images/portfolio/Filtro 1.jpg',
     title: 'Filtro 1',
   },

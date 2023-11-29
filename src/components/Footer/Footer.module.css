@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-evenly;
     background: rgb(15,171,203);
     background: linear-gradient(0deg, rgba(15,171,203,1) 0%, rgba(8,16,162,1) 100%);
     color: aliceblue;
@@ -14,49 +14,52 @@
 .icons {
     display: flex;
     flex-direction: row;
-    font-size: 40px;
-    justify-content: start;
     align-items: center;
-   
+    font-size: 40px; 
 }
 
-.facebook {
+.facebook a {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    transition: .8s;
-    cursor: pointer;
-}
-
-.facebook:hover {
-    color: #3b5998;
-}
-
-.instagram {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: row;
     transition: .8s;
     cursor: pointer;
     color: aliceblue;
 }
 
-.instagram:hover {
+.facebook a:hover {
+    color: #3b5998;
+}
+
+.instagram a  {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    transition: .8s;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.instagram a:hover {
     color: #d6249f;
     box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 
-.whatsapp {
+.whatsapp a {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: row;
     transition: .8s;
     cursor: pointer;
+    color: aliceblue;
 }
 
-.whatsapp:hover {
+.whatsapp a:hover {
     color: #25d366;
+}
+
+.footer p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
