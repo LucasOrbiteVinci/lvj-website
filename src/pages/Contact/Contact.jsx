@@ -2,6 +2,7 @@ import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import toast, { Toaster } from 'react-hot-toast';
 
 //css
 import styles from './Contact.module.css';
@@ -28,6 +29,10 @@ export const Contact = () => {
 
   const form = useRef();
 
+  const notifySucess = () => toast.success('Mensagem enviada com sucesso!');
+  const notifyError = () =>
+    toast.error('Erro no envio da mensagem. Tente novamente!');
+
   const sendEmail = (data, e) => {
     e.preventDefault();
 
@@ -39,10 +44,12 @@ export const Contact = () => {
         '8yfmdKJwS18LGtGpb',
       )
       .then(
-        (result) => {
+        () => {
+          notifySucess();
           reset();
         },
-        (error) => {
+        () => {
+          notifyError();
           reset();
         },
       );
@@ -70,6 +77,7 @@ export const Contact = () => {
           <input type="submit" value="Enviar" />
         </div>
       </form>
+      <Toaster />
     </div>
   );
 };
