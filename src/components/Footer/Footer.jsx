@@ -2,37 +2,37 @@
 import styles from './Footer.module.css';
 
 //icons
-import { FaFacebookSquare } from 'react-icons/fa';
-import { FaInstagramSquare } from 'react-icons/fa';
-import { FaWhatsappSquare } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <h3>Acompanhe nosso trabalho:</h3>
-      <div className={styles.icons}>
-        <div className={styles.facebook}>
+      <ul className={styles.social_icon}>
+        <li className={styles.social_icon__item}>
           <a
+            className={styles.social_icon__link}
             href="https://www.facebook.com/lvjpiscinas?locale=pt_BR"
             target="_blank"
           >
-            <FaFacebookSquare />
+            <ion-icon name="logo-facebook"></ion-icon>
           </a>
-        </div>
-        <div className={styles.instagram}>
-          <a href="https://www.instagram.com/lvjpiscinas/" target="_blank">
-            <FaInstagramSquare />
+        </li>
+        <li className={styles.social_icon__item}>
+          <a className={styles.social_icon__link} href="#" target="_blank">
+            <ion-icon name="logo-whatsapp"></ion-icon>
           </a>
-        </div>
-        <div className={styles.whatsapp}>
-          <a href="#" target="_blank">
-            <FaWhatsappSquare />
+        </li>
+        <li className={styles.social_icon__item}>
+          <a
+            className={styles.social_icon__link}
+            href="https://www.instagram.com/lvjpiscinas/"
+            target="_blank"
+          >
+            <ion-icon name="logo-instagram"></ion-icon>
           </a>
-        </div>
-      </div>
+        </li>
+      </ul>
       <p>
-        Todos os direitos reservados. &copy;2023 LVJ Piscinas CNPJ:
-        XX.XXX.XXX/XXXX-XX.
+        &copy;2023 LVJ Piscinas CNPJ:XXXXXX/XX | Todos os direitos reservados.
       </p>
     </footer>
   );
