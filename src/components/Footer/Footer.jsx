@@ -17,7 +17,11 @@ const Footer = () => {
           </a>
         </li>
         <li className={styles.social_icon__item}>
-          <a className={styles.social_icon__link} href="#" target="_blank">
+          <a
+            className={styles.social_icon__link}
+            href="https://wa.me/+5511992550165"
+            target="_blank"
+          >
             <ion-icon name="logo-whatsapp"></ion-icon>
           </a>
         </li>
@@ -32,7 +36,8 @@ const Footer = () => {
         </li>
       </ul>
       <p>
-        &copy;2023 LVJ Piscinas CNPJ:XXXXXX/XX | Todos os direitos reservados.
+        &copy;2023 LVJ Piscinas CNPJ: 27.870.603/0001-09 | Todos os direitos
+        reservados.
       </p>
     </footer>
   );
