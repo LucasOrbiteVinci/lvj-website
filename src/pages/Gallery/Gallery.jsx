@@ -1,21 +1,22 @@
-import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+
+import styles from './Gallery.module.css';
 
 export default function StandardImageList() {
   return (
-    <ImageList x={{ width: 400, height: 450 }} cols={3} rowHeight={600}>
+    <div className={styles.container}>
       {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+        <Card sx={{ maxWidth: 345 }} key={item.img} className={styles.item}>
+          <CardMedia
+            component="img"
+            height="600"
+            image={`${item.img}?w=164&h=164&fit=crop&auto=format`}
             alt={item.title}
-            loading="lazy"
           />
-        </ImageListItem>
+        </Card>
       ))}
-    </ImageList>
+    </div>
   );
 }
 

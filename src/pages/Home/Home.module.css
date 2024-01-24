@@ -14,31 +14,7 @@
 
 .iconsList {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     flex-direction: row;
-    font-size: 5px;
-}
-
-.lvj_market{
-    font-size: 15px;
-    
-    
-}
-
-.lvj_prof {
-    font-size: 15px;
-    
-}
-
-.lvj_diving {
-    font-size: 25px;
-    
-   
-}
-
-.lvj_services {
-    font-size: 15px;
-   
-    
+    justify-content: center;
+    align-items: center;
 }

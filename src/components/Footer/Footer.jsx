@@ -36,7 +36,7 @@ const Footer = () => {
         </li>
       </ul>
       <p>
-        &copy;2023 LVJ Piscinas CNPJ: 27.870.603/0001-09 | Todos os direitos
+        &copy;2024 LVJ Piscinas CNPJ: 27.870.603/0001-09 | Todos os direitos
         reservados.
       </p>
     </footer>

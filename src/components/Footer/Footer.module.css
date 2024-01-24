@@ -2,17 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:space-evenly;
-  background: rgb(15,171,203);
-  background: linear-gradient(0deg, rgba(15,171,203,1) 0%, rgba(8,16,162,1) 100%);
+  justify-content: space-evenly;
+  background: rgb(15, 171, 203);
+  background: linear-gradient(
+    0deg,
+    rgba(15, 171, 203, 1) 0%,
+    rgba(8, 16, 162, 1) 100%
+  );
   color: aliceblue;
   margin-top: auto;
-  height: 10%;
-  position: relative;
+  position: static;
+  bottom: 0;
 }
 
-.social_icon
-{
+.social_icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,8 +25,7 @@
   margin-top: 5px;
 }
 
-.social_icon__item
- {
+.social_icon__item {
   list-style: none;
 }
 
